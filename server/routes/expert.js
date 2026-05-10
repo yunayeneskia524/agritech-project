@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const auth = require("../middleware/authMiddleware");
+const role = require("../middleware/roleMiddleware");
+const { getQuestions, askQuestion, answerQuestion, deleteQuestion } = require("../controllers/expertController");
+router.get("/", auth, getQuestions);
+router.post("/", auth, askQuestion);
+router.put("/:id/answer", auth, role("admin"), answerQuestion);
+router.delete("/:id", auth, deleteQuestion);
+module.exports = router;
