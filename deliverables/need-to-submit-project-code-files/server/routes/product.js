@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const auth = require("../middleware/authMiddleware");
+const role = require("../middleware/roleMiddleware");
+const { getProducts, createOrder, getMyOrders, getAllOrders, updateOrderStatus } = require("../controllers/productController");
+router.get("/", auth, getProducts);
+router.post("/order", auth, createOrder);
+router.get("/my-orders", auth, getMyOrders);
+router.get("/all-orders", auth, role("admin"), getAllOrders);
+router.patch("/orders/:id/status", auth, role("admin"), updateOrderStatus);
+module.exports = router;
