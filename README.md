@@ -4,7 +4,7 @@ The application simplifies the life of farmers by offering features such as a fa
 Each user type — farmers and admins — has a dedicated interface to streamline their workflows and responsibilities. The system stores and processes large volumes of agricultural data, helping users make evidence-based decisions. Security and role-based access ensure safe usage and data protection. Overall, the platform aims to digitally transform farming operations
 
 
-**Status:** planning
+**Status:** in_progress
 **Domain:** Sustainability & Green Tech
 **Progress:** 0%
 
